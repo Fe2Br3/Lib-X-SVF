@@ -21,6 +21,12 @@
 #ifndef LIBXSVF_H
 #define LIBXSVF_H
 
+#ifdef _MSC_VER
+// This header is compiled in C and C++. C doesn't have enum classes, so we must disable this warning:
+//  "The enum type 'libxsvf_mode' is unscoped. Prefer 'enum class' over 'enum' (Enum.3)"
+#pragma warning(disable : 26812)
+#endif
+
 enum libxsvf_mode
 {
     LIBXSVF_MODE_SVF  = 1,
@@ -92,6 +98,10 @@ enum libxsvf_mem
     LIBXSVF_MEM_SVF_TIR_RET_MASK = 35,
     LIBXSVF_MEM_NUM              = 36
 };
+
+#ifdef MSVC
+#pragma warning(pop)
+#endif
 
 struct libxsvf_host
 {
