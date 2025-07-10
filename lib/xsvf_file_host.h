@@ -12,13 +12,13 @@ public:
     XSVF_File_Host(std::istream && stream);
     XSVF_File_Host(std::istream & stream);
 
-    virtual int setup();
-    virtual int shutdown();
-    virtual int sync();
-    virtual int getbyte();
-    virtual void * realloc(void * ptr, int size, enum libxsvf_mem which);
-    virtual void report_tapstate();
-    virtual void report_status(const char * message);
+    virtual int setup() override;
+    virtual int shutdown() override;
+    virtual int sync() override;
+    virtual int getbyte() override;
+    virtual void * realloc(void * ptr, int size, enum libxsvf_mem which) override;
+    virtual void report_tapstate() override;
+    virtual void report_status(const char * message) override;
 
 private:
     std::istream & stream_;

@@ -18,6 +18,8 @@
  *
  */
 
+#ifdef __linux__
+
 #include "libxsvf.h"
 
 #include <errno.h>
@@ -549,3 +551,5 @@ int main(int argc, char ** argv)
 
     return rc;
 }
+
+#endif
