@@ -5,19 +5,19 @@
 
 namespace codible
 {
-  class XSVF_Player : public XSVF_Player_Base
-  {
-  public:
-    XSVF_Player(XSVF_Host &h);
+class XSVF_Player : public XSVF_Player_Base
+{
+public:
+    XSVF_Player(XSVF_Host & h);
     virtual int play();
-  };
+};
 
-  class SVF_Player : public XSVF_Player_Base
-  {
-  public:
-    SVF_Player(XSVF_Host &h);
+class SVF_Player : public XSVF_Player_Base
+{
+public:
+    SVF_Player(XSVF_Host & h);
     virtual int play();
-  };
+};
 
 } // namespace codible
 
