@@ -19,6 +19,7 @@
  */
 
 #include "libxsvf.h"
+#include <stdlib.h>
 
 /* command codes as defined in xilinx xapp503 */
 enum xsvf_cmd
